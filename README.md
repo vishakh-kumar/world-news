@@ -6,7 +6,7 @@ One stop for all the news from around the world.
 - HTML5
 - CSS3
 - Javascript/jQuery
-- [News API](https://newsapi.org/v2/everything?q=etherium&apiKey=8bfde7e8fc53418a8467de3409e72ab8)
+- [News API](https://gnews.io/api/v4/search?q=example&token=c4c8a4cebef621ab5eafecf6b7a504ea)
 
 ## Wireframe
 ![screenshot](img/project-img.png)

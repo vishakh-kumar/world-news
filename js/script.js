@@ -1,17 +1,44 @@
+// Constant
 
 
-let initialData;
-let mainData;
+// apps State
 
-let apiKey = "c4c8a4cebef621ab5eafecf6b7a504ea";
-let newsLink = "https://gnews.io/api/v4/search?q=example&token=c4c8a4cebef621ab5eafecf6b7a504ea"
+// cached element references
+let $main = $("main");
+let $div = $("div");
 
-//https://newsapi.org/v2/everything?q=keyword&apiKey=8bfde7e8fc53418a8467de3409e72ab8
-let newsApi = $.ajax(newsLink)
-.then(function(data){
+// event listeners
 
-console.log(data);
-})
+//funtions
+// we need newsArray.content
+function handleGetData(event) {
+    event.preventDefault();
+    $main.empty();
+    let searchText = $("input#inputBtn").val()
 
+    $.ajax(`https://gnews.io/api/v4/search?q=${searchText}&token=c4c8a4cebef621ab5eafecf6b7a504ea`)
+        .then(function (data) {
+                eachNews = data.articles;
 
-//how to create modal for the pop up
+                for (i = 0; i < 6; i++) {
+                    let newsArray = eachNews[i];
+                    let content = newsArray.content;
+
+                    $main.append(`
+        <article>
+        <h3>${newsArray.title}</h3>
+        <p>${newsArray.description}</p>
+        </article>
+        `)
+        
+                }
+            },
+            function (error) {
+                console.log("Bad request: ", error);
+            }
+
+        )
+}
+
+//Event Handlers
+$("form").on("submit", handleGetData);
