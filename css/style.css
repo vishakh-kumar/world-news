@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header{
+    font-family:'Newsreader', serif;
+    text-align: center;
+}
+h1{
+
+    font-size: 60px;
+}
+h2{
+    font-weight:bold;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    margin: auto;
+}

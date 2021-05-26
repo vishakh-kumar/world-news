@@ -5,9 +5,6 @@
 
 // cached element references
 let $main = $("main");
-let $div = $("div");
-
-// event listeners
 
 //funtions
 // we need newsArray.content
@@ -30,7 +27,7 @@ function handleGetData(event) {
         <p>${newsArray.description}</p>
         </article>
         `)
-        
+
                 }
             },
             function (error) {
