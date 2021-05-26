@@ -1,21 +1,64 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
-header{
-    font-family:'Newsreader', serif;
-    text-align: center;
-}
-h1{
 
-    font-size: 60px;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(#8BCFFC, #D9F4FF);
 }
-h2{
-    font-weight:bold;
+
+div {
+    flex: 1;
 }
-main{
+
+header {
+    font-family: 'Newsreader', serif;
+    text-align: center;
+    margin-top: 15px
+}
+
+h1 {
+
+    font-size: 80px;
+    color: blue;
+}
+
+h2 {
+    font-weight: bold;
+}
+form{
+    margin-top: 15px;
+}
+input{
+    min-width: 300px;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+main {
     display: flex;
     flex-wrap: wrap;
     max-width: 1040px;
     margin: auto;
+    margin-top: 20px;
+
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 
+    0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
 }
