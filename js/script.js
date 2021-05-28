@@ -5,7 +5,8 @@
 
 // cached element references
 let $main = $("main");
-
+const $modal = $('.modal');
+let newsArray;
 
 //funtions
 // we need newsArray.content
@@ -13,7 +14,6 @@ function handleGetData(event) {
     event.preventDefault();
     $main.empty();
     let searchText = $("input#inputBtn").val();
-   
 
     $.ajax(`https://gnews.io/api/v4/search?q=${searchText}&token=c4c8a4cebef621ab5eafecf6b7a504ea`)
         .then(function (data) {
@@ -38,6 +38,12 @@ function handleGetData(event) {
 
         )
 }
+// // for the modal
+// function handleClick(){
+//     const news = this.dataset.newsTitle;
+
+//     const 
+// }
 
 //Event Handlers
 $("form").on("submit", handleGetData);
