@@ -38,12 +38,6 @@ function handleGetData(event) {
 
         )
 }
-// // for the modal
-// function handleClick(){
-//     const news = this.dataset.newsTitle;
-
-//     const 
-// }
 
 //Event Handlers
 $("form").on("submit", handleGetData);
