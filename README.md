@@ -10,3 +10,9 @@ One stop for all the news from around the world.
 
 ## Wireframe
 ![screenshot](img/project-img.png)
+
+## Future Enhancements
+- Modal function 
+
+## Website link
+[News App](https://vishakh-kumar.github.io/world-news/)
